@@ -18,7 +18,80 @@
 </head>
 
 <body>
-    <h1>Trang Đang Tạm Dừng Hoạt Động</h1>
-</body>
 
+<div class="tabMenu">
+  <button class="tablinks active" onclick="openCity(event, 'DaysLove')"><i class="fa-solid fa-heart"></i></button>
+  <button class="tablinks" onclick="openCity(event, 'Stories')"><i class="fa-solid fa-book"></i></button>
+  <button class="tablinks" onclick="openCity(event, 'Events')"><i class="fa-regular fa-calendar"></i></button>
+  <button class="tablinks" onclick="openCity(event, 'Setting')"><i class="fa-solid fa-gear"></i></button>
+</div>
+
+<div id="DaysLove" class="tabcontent">
+  <h3>Ngày Yêu</h3>
+  <div class="DaysLove" id="DaysLoveJS">
+    <h1 class="timeel days" id="iDaysLove">00</h1>
+    <span class="timeel hours">2</span>
+    <span class="timeel timeRefHours">:</span>
+    <span class="timeel minutes">35</span>
+    <span class="timeel timeRefMinutes">:</span>
+    <span class="timeel seconds">55</span>
+    <span class="timeel timeRefSeconds"></span>
+</div>
+
+
+</div>
+
+<div id="Stories" class="tabcontent">
+  <h3>Nhật kí</h3>
+  <label for="sealorch" id="mySearch">
+    <input type="search" id="search" autocomplete="off" spellcheck="false" placeholder="Tìm kiếm bài viết nhanh">
+</label>
+  <div class="container">
+
+
+    <div class="post-container">
+
+    </div>
+    <br>
+    <button class="btn btn--view">Xem thêm</button>
+</div>
+</div>
+
+<div id="Events" class="tabcontent">
+  <h3>Sự kiện</h3>
+  <p>Các sự kiện sắp diễn ra.</p>
+</div>
+<div id="Setting" class="tabcontent">
+    <h3>Cài đặt</h3>
+    <p>Cài đặt chế độ tối, font chữ,....</p>
+    <div class="IconMenu" id="iDarkMode">
+        <i id="dark-mode-toggle" class="fas fa-sun" aria-hidden="true"></i>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+<script>
+    function openCity(evt, TabMenuName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(TabMenuName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+
+<script src="./Data/JS/DaysLove.js"></script>
+<script src="./Data/JS/Memory.js"></script>
+<script src="./Data/JS/Stories.js"></script>
+<script src="./Data/JS/DarkMode.js"></script>
 </html>
