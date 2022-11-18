@@ -18,42 +18,83 @@
 </head>
 
 <body>
+<div class="PageLoad" id="PageLoad">
+  <div class = "centered">
+    <div class = "blob-1" >
+      <h1 id="iconPageLoad">❤</h1>
+    </div>
+    <div class = "blob-2">
+      
+    </div>
+  </div>
+</div>
 
 <div class="tabMenu">
-  <button class="tablinks active" onclick="openCity(event, 'DaysLove')"><i class="fa-solid fa-heart"></i></button>
-  <button class="tablinks" onclick="openCity(event, 'Stories')"><i class="fa-solid fa-book"></i></button>
-  <button class="tablinks" onclick="openCity(event, 'Events')"><i class="fa-regular fa-calendar"></i></button>
-  <button class="tablinks" onclick="openCity(event, 'Setting')"><i class="fa-solid fa-gear"></i></button>
+  <button class="tablinks active" onclick="openTab(event, 'DaysLove'), iConDaysLove()"><i class="fa-solid fa-heart"></i></button>
+  <button class="tablinks" onclick="openTab(event, 'Stories'), iConStories()"><i class="fa-solid fa-book"></i></button>
+  <button class="tablinks" onclick="openTab(event, 'Events'),iConEvents()"><i class="fa-regular fa-calendar"></i></button>
+  <button class="tablinks" onclick="openTab(event, 'Setting'),iConSetting()"><i class="fa-solid fa-gear"></i></button>
 </div>
 
 <div id="DaysLove" class="tabcontent">
-  <h3>Ngày Yêu</h3>
-  <div class="DaysLove" id="DaysLoveJS">
-    <h1 class="timeel days" id="iDaysLove">00</h1>
-    <span class="timeel hours">2</span>
-    <span class="timeel timeRefHours">:</span>
-    <span class="timeel minutes">35</span>
-    <span class="timeel timeRefMinutes">:</span>
-    <span class="timeel seconds">55</span>
-    <span class="timeel timeRefSeconds"></span>
-</div>
+  <div>
+    <div class="card">
+      <div class="percent">
+        <svg>
+          <circle cx="90" cy="90" r="80"></circle>
+          <circle cx="90" cy="90" r="80" id="iProgressLove" style="--percent: 0"></circle>
+        </svg>
+
+        <div class="number">
+          <p>Ngày Yêu</p>
+          <div class="DaysLove" id="DaysLoveJS">
+            <h1 class="timeel days" id="iDaysLove">00</h1>
+            <span class="timeel hours">2</span>
+            <span class="timeel timeRefHours">:</span>
+            <span class="timeel minutes">35</span>
+            <span class="timeel timeRefMinutes">:</span>
+            <span class="timeel seconds">55</span>
+            <span class="timeel timeRefSeconds"></span>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    
+  </div>
+ 
+  
+  <div class="IMGCouple">
+    <img src="./Data/IMG/Couple.png" alt="" srcset="">
+    <div class="bubbling-heart">
+      <div><i class="fa fa-heart fa-5x"></i></div>
+      <div><i class="fa fa-heart fa-5x"></i></div>
+      <div><i class="fa fa-heart fa-5x"></i></div>
+      <div><i class="fa fa-heart fa-5x"></i></div>
+    </div>
+  </div>
 
 
 </div>
 
 <div id="Stories" class="tabcontent">
-  <h3>Nhật kí</h3>
-  <label for="sealorch" id="mySearch">
-    <input type="search" id="search" autocomplete="off" spellcheck="false" placeholder="Tìm kiếm bài viết nhanh">
-</label>
+  <div class="Search">
+    <label id="mySearch">
+      <input type="search" id="search" autocomplete="off" spellcheck="false" placeholder="Tìm kiếm bài viết nhanh">
+    </label>
+    <div class="Key">
+      <button onclick="keyThy()">Thy</button>
+      <button onclick="keyHung()">Hùng</button>
+      <button onclick="key2022()">2022</button>
+      <button onclick="key2021()">2021</button>
+    </div>
+  </div>
+ 
   <div class="container">
-
-
     <div class="post-container">
 
     </div>
-    <br>
-    <button class="btn btn--view">Xem thêm</button>
+    <button class="btn btn--view">Xem nhật kí cũ hơn</button>
 </div>
 </div>
 
@@ -75,7 +116,7 @@
 
 </body>
 <script>
-    function openCity(evt, TabMenuName) {
+    function openTab(evt, TabMenuName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
@@ -90,7 +131,6 @@
     }
     </script>
 
-<script src="./Data/JS/DaysLove.js"></script>
 <script src="./Data/JS/Memory.js"></script>
 <script src="./Data/JS/Stories.js"></script>
 <script src="./Data/JS/DarkMode.js"></script>

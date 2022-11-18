@@ -1,7 +1,7 @@
 // query selectors
 let posts = [];
 let filteredPosts = [];
-const POSTS_TO_SHOW = 6;
+const POSTS_TO_SHOW = 15;
 let maxDisplayLimit = POSTS_TO_SHOW;
 const postContainer = document.querySelector('.post-container');
 const search = document.querySelector('[type="search"]');
@@ -21,7 +21,11 @@ function generatePost(post) {
     <img class=" post__author--avatar" width="55" src="${post.meta.author.avatar}" alt="${post.user.name[0].firstName} ${post.user.name[1].lastName}">
     <div>
       <p class=" post__author--name">${post.user.name[0].firstName} ${post.user.name[1].lastName} <i  style="color: #2d88ff;font-size: 15px;"  class="fa-solid fa-circle-check"></i></p>
+      <div>
       <p class=" post__date">${returnPostDate(new Date(post.meta.date))}</p>
+      
+      <p class="Emoji"> ${post.meta.tags.map((tag) => `<span class="post__tag">${tag}</span>`).join('')}</p>
+      </div>
     </div>
   </div>
   <div class="post__body">
@@ -35,7 +39,7 @@ function generatePost(post) {
   </div>
 
 
-  <p> ${post.meta.tags.map((tag) => `<span class="post__tag">${tag}</span>`).join('')}</p>
+  
   `;
   return article;
 }
@@ -83,3 +87,21 @@ function viewMorePosts(){
 document.querySelector('.btn--view').addEventListener('click', viewMorePosts);
 
 search.addEventListener('keyup', filterPosts);
+
+var inKey = document.getElementById('search');
+function keyThy(){
+  inKey.value = 'Thy';
+  filterPosts();
+}
+function keyHung(){
+  inKey.value = 'Hùng';
+  filterPosts();
+}
+function key2022(){
+  inKey.value = '2022';
+  filterPosts();
+}
+function key2021(){
+  inKey.value = '2021';
+  filterPosts();
+}

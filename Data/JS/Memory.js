@@ -1,20 +1,106 @@
-function Memory() {
+window.onload = function () {
+    RandomEmoji();
+    setTimeout(OffPageLoad, 2000);
+    OnLOAD();
+};
+var iConPageLoad = document.getElementById('iconPageLoad');
+function RandomEmoji() {
+
+    var Random = Math.floor((Math.random() * 5) + 1);
+
+    if (Random == 1) {
+        iConPageLoad.textContent = "❤"
+    }
+    if (Random == 2) {
+        iConPageLoad.textContent = "💕"
+    }
+    if (Random == 3) {
+        iConPageLoad.textContent = "😘"
+    }
+    if (Random == 4) {
+        iConPageLoad.textContent = "💋"
+    }
+    if (Random == 5) {
+        iConPageLoad.textContent = "😍"
+    }
+}
+
+var PageLoad = document.getElementById('PageLoad')
+function OffPageLoad() {
+    PageLoad.style.display = 'none';
+}
+function OnPageLoad() {
+    PageLoad.style.display = 'block';
+    setTimeout(OffPageLoad, 1200);
+}
+function iConDaysLove() {
+    iConPageLoad.textContent = "💕";
+    OnPageLoad();
+}
+
+function iConStories() {
+    iConPageLoad.textContent = "📖";
+    OnPageLoad();
+}
+function iConEvents() {
+    iConPageLoad.textContent = "📅";
+    OnPageLoad();
+}
+function iConSetting() {
+    iConPageLoad.textContent = "⚙";
+    OnPageLoad();
+}
+
+
+
+
+
+
+
+
+
+function OnLOAD() {
+    countUpFromTime("July 15, 2021 00:00:00", 'DaysLoveJS'); // ****** Change this line!
+}
+function countUpFromTime(countFrom, id) {
+    countFrom = new Date(countFrom).getTime();
+    var now = new Date(),
+        countFrom = new Date(countFrom),
+        timeDifference = (now - countFrom);
+
+    var secondsInADay = 60 * 60 * 1000 * 24,
+        secondsInAHour = 60 * 60 * 1000;
+
+    days = Math.floor(timeDifference / (secondsInADay) * 1);
+    hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
+    mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
+    secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+
+    var idEl = document.getElementById(id);
+    idEl.getElementsByClassName('days')[0].innerHTML = days;
+    idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+    idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
+    idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+
+    clearTimeout(countUpFromTime.interval);
+    countUpFromTime.interval = setTimeout(function () { countUpFromTime(countFrom, id); }, 1000);
+
+    setTimeout(LoveMemory, 1000);
+
+}
+
+function LoveMemory() {
     var SuKien = 365 * 2;
     var NgayHienTai = document.getElementById('iDaysLove').textContent;
 
     var TrungGian = NgayHienTai * 100 / SuKien;
     var MotNam = TrungGian.toFixed(0);
 
-    var NgayConLai = SuKien - NgayHienTai;
+    document.getElementById("iProgressLove").style = '--percent:' + MotNam;
 
-    document.getElementById("iProgressLove").style.width = MotNam + "%";
-    document.getElementById("iProgressLove").style.animationPlayState = "running";
-
-    document.getElementById("ipro").innerText = MotNam + "%";
-
-    document.getElementById("DaysMemory").textContent = NgayConLai + " Ngày nữa";
-    setTimeout(Birthdays, 1000)
+    // setTimeout(Birthdays, 1000)
 }
+
 
 
 function EventFn() {
