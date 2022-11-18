@@ -2,14 +2,28 @@
     --background: #eee;
     --color: #000;
 
+    /* DL = DayLove */
     --DLbackground: #0000001e;
+
+    --Line:#ffcc00;
+    --Light:#fff;
+    
+    --CardBG: #fff;
+    --SCardIMG: var(--background);
 }
 
 .darkmode {
+    transition: 0.8s;
     --background: #111;
     --color: #eee;
 
     --DLbackground: #ffffff1e;
+
+    --Line:#230075;
+    --Light:#ffffff;
+
+    --CardBG: #000;
+    --SCardIMG: var(--background);
 }
 
 * {
@@ -19,11 +33,100 @@
 body {
     background-color: var(--background);
     color: var(--color);
+    transition: 0.8s;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(/Data/IMG/Background/BG4.jpg);
+    background-size: cover;
 }
 
 
+
+
+.PageLoad .centered {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+    z-index: 99;
+}
+
+.PageLoad .blob-1,
+.PageLoad .blob-2 {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.PageLoad .blob-1 {
+    color: red;
+    padding: 5px;
+    left: 20%;
+    animation: osc-l 2.5s ease infinite;
+}
+
+.PageLoad .blob-1 h1 {
+    font-size: 40px;
+    margin: 7px 0;
+}
+
+.PageLoad .blob-2 {
+    left: 80%;
+    animation: osc-r 2.5s ease infinite;
+    background-color: pink;
+    background-image: url(/Data/IMG/LoadPage.png);
+    background-size: cover;
+}
+
+@keyframes osc-l {
+    0% {
+        left: 20%;
+    }
+
+    50% {
+        left: 50%;
+    }
+
+    100% {
+        left: 20%;
+    }
+}
+
+@keyframes osc-r {
+    0% {
+        left: 80%;
+    }
+
+    50% {
+        left: 50%;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
+
+
+@keyframes bubbleUp {
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -25vh) scale(2);
+    }
+}
+
+@keyframes oscillate {
+    50% {
+        transform: translateX(-12.5vw) rotate(-25deg);
+    }
+}
 .tabMenu {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -80,20 +183,24 @@ body {
 
 #DaysLove .IMGCouple img {
     width: 100%;
+    margin-top: -35px;
+    
 }
 
 
-.card {
+#DaysLove .card {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+   
+}
+
+#DaysLove .card .percent {
     position: relative;
-    top: 20px;
-    margin-bottom: -80px;
 }
 
-.card .percent {
-    position: relative;
-}
-
-.card svg {
+#DaysLove .card svg {
     background-color: var(--DLbackground);
     border-radius: 50%;
     position: relative;
@@ -102,7 +209,7 @@ body {
     transform: rotate(-90deg);
 }
 
-.card svg circle {
+#DaysLove .card svg circle {
     width: 100%;
     height: 100%;
     fill: none;
@@ -111,111 +218,42 @@ body {
     stroke-linecap: round;
 }
 
-.card svg circle:last-of-type {
+#DaysLove .card svg circle:last-of-type {
     stroke-width: 8;
 }
 
-.card svg circle:last-of-type {
+#DaysLove .card svg circle:last-of-type {
     stroke-dasharray: 625px;
     stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
     stroke: pink;
 }
 
-.card .number {
+#DaysLove .card .number {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.card .number h3 {
+#DaysLove .card .number h3 {
     font-weight: 200;
     font-size: 3.5rem;
 }
 
-.card .number h3 span {
+#DaysLove .card .number h3 span {
     font-size: 2rem;
 }
 
-.card .title h2 {
+#DaysLove .card .title h2 {
     margin: 25px 0 0;
 }
 
-.card:nth-child(1) svg circle:last-of-type {
+#DaysLove .card:nth-child(1) svg circle:last-of-type {
     stroke: pink;
 }
 
 
-.centered {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--background);
-    z-index: 99;
-}
-
-.blob-1,
-.blob-2 {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.blob-1 {
-    color: red;
-    padding: 5px;
-    left: 20%;
-    animation: osc-l 2.5s ease infinite;
-}
-
-.blob-1 h1 {
-    font-size: 40px;
-    margin: 7px 0;
-}
-
-.blob-2 {
-    left: 80%;
-    animation: osc-r 2.5s ease infinite;
-    background-color: pink;
-    background-image: url(/Data/IMG/LoadPage.png);
-    background-size: cover;
-}
-
-@keyframes osc-l {
-    0% {
-        left: 20%;
-    }
-
-    50% {
-        left: 50%;
-    }
-
-    100% {
-        left: 20%;
-    }
-}
-
-@keyframes osc-r {
-    0% {
-        left: 80%;
-    }
-
-    50% {
-        left: 50%;
-    }
-
-    100% {
-        left: 80%;
-    }
-}
-
-
-.bubbling-heart div {
+#DaysLove .bubbling-heart div {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -224,59 +262,46 @@ body {
     animation: bubbleUp 2s infinite;
 }
 
-.bubbling-heart div .fa {
+#DaysLove .bubbling-heart div .fa {
     transform: translateX(12.5vw) rotate(25deg);
     animation: oscillate 4s ease-in-out infinite;
     color: red;
 
 }
 
-.bubbling-heart div:nth-child(2) {
+#DaysLove .bubbling-heart div:nth-child(2) {
     animation-delay: 0.5s;
 }
 
-.bubbling-heart div:nth-child(2) .fa {
+#DaysLove.bubbling-heart div:nth-child(2) .fa {
     color: pink;
     animation-delay: 1s;
 }
 
-.bubbling-heart div:nth-child(3) {
+#DaysLove .bubbling-heart div:nth-child(3) {
     animation-delay: 1s;
 }
 
-.bubbling-heart div:nth-child(3) .fa {
+#DaysLove .bubbling-heart div:nth-child(3) .fa {
     color: red;
     animation-delay: 2s;
 }
 
-.bubbling-heart div:nth-child(4) {
+#DaysLove .bubbling-heart div:nth-child(4) {
     animation-delay: 1.5s;
 }
 
-.bubbling-heart div:nth-child(4) .fa {
+#DaysLove .bubbling-heart div:nth-child(4) .fa {
     color: pink;
     animation-delay: 3s;
 }
 
-.fa-5x {
+#DaysLove .fa-5x {
     font-size: 3em;
 }
 
-@keyframes bubbleUp {
-    50% {
-        opacity: 1;
-    }
 
-    100% {
-        transform: translate(-50%, -25vh) scale(2);
-    }
-}
 
-@keyframes oscillate {
-    50% {
-        transform: translateX(-12.5vw) rotate(-25deg);
-    }
-}
 #Stories {
     padding: 20px 20px 70px 20px;
 }
@@ -331,7 +356,7 @@ body {
     background-position-y: -10px;
 }
 .post {
-    background-color: #333;
+    background-color: var(--CardBG);
     margin: 10px 0;
     padding: 10px;
     border-radius: 10px;
@@ -392,3 +417,95 @@ body {
     background-color: #eee;
     border: none;
 }
+
+
+#Setting {
+    padding: 10px 20px 60px 20px;
+}
+
+#Setting .Card {
+    width: calc(100% - 20px);
+    margin: auto;
+    padding: 10px ;
+    background-color: var(--CardBG);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+#Setting .Card h1 {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+.DarkModeD {
+    position: fixed;
+    top: 0;
+    right: 20px;
+
+}
+.DarkModeD .Line {
+    height: 20px;
+    width: 3px;
+    background-color: var(--Line);
+    margin: auto;
+}
+@keyframes Line {
+   0% {
+        height: 20px;
+    }
+    50% {
+        height: 50px;
+    }
+    100% {
+        height: 20px;
+    }
+}
+
+.DarkModeD .Light {
+    color: var(--Light);
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    background-color: var(--Line);
+}
+#dark-mode-toggle {
+    margin: 10px auto;
+}
+.SSkin {
+    display: grid;
+    grid-template-columns: 50% 50% 50% 50%;
+    overflow-x: auto;
+    margin: 5px 0;
+}
+
+.SBackground {
+    display: grid;
+    grid-template-columns: 50% 50% 50% 50% 50%;
+    overflow-x: auto;
+    margin: 5px 0;
+}
+
+
+.SCard input[type="radio"] {
+    display: none;
+  }
+.SCard img {
+    background-color: var(--SCardIMG);
+    height: 250px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+.SCard input[type="radio"]:checked + img {
+    background-color: pink;
+  }
+
+.Card .Block select {
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+

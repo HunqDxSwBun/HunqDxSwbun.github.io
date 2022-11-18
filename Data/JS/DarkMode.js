@@ -3,6 +3,9 @@
 // check for saved 'darkMode' in localStorage
 let darkMode = localStorage.getItem('darkMode');
 
+// Hiệu ứng trang cài đặt
+var Line = document.getElementById('Line');
+
 const darkModeToggle = document.querySelector('#iDarkMode');
 
 const enableDarkMode = () => {
@@ -30,14 +33,27 @@ if (darkMode === 'enabled') {
 
 // When someone clicks the button
 darkModeToggle.addEventListener('click', () => {
-    // get their darkMode setting
-    darkMode = localStorage.getItem('darkMode');
+   
+    HieuUngDarkMode();
+    setTimeout(CheckDarkMode,500)
+    function CheckDarkMode() {
+        darkMode = localStorage.getItem('darkMode');
 
-    // if it not current enabled, enable it
-    if (darkMode !== 'enabled') {
-        enableDarkMode();
-        // if it has been enabled, turn it off  
-    } else {
-        disableDarkMode();
+        // if it not current enabled, enable it
+        if (darkMode !== 'enabled') {
+            enableDarkMode();
+            // if it has been enabled, turn it off  
+        } else {
+            disableDarkMode();
+        }
     }
+   
 });
+
+function HieuUngDarkMode() {
+    Line.style.animation = 'Line 0.8s alternate';
+    setTimeout(OffHieuUngDarkMode, 800);
+}
+function OffHieuUngDarkMode() {
+    Line.style.animation = '';
+}
