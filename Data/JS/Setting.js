@@ -15,7 +15,6 @@ function openTab(evt, TabMenuName) {
 
 var vHieuUng = document.getElementById('vHieuUng');
 
-
 function FnHieuUng() {
     var OptHieuUng = document.getElementById('OptHieuUng').value;
     if (OptHieuUng == 0) {
