@@ -69,7 +69,7 @@
 
 
     <div class="IMGCouple">
-      <img src="./Data/IMG/Couple.png" alt="" srcset="">
+      <img id="iIMGCouple" src="./Data/IMG/Skins/Skin1.png" alt="" srcset="">
       <div class="bubbling-heart" id="vHieuUng">
         <div><i class="fa fa-heart fa-5x"></i></div>
         <div><i class="fa fa-heart fa-5x"></i></div>
@@ -141,16 +141,16 @@
       <h1>Trang Phục</h1>
       <div class="SCard SSkin">
         <label>
-          <input type="radio" name="Skin" checked /><img src="./Data/IMG/Couple.png" />
+          <input type="radio" name="Skin" value="0" onclick="FnSkin()" checked  /><img src="./Data/IMG/Skins/Skin1.png" />
         </label>
         <label>
-          <input type="radio" name="Skin" /><img src="./Data/IMG/Couple.png" />
+          <input type="radio" name="Skin" value="1" onclick="FnSkin()" /><img src="./Data/IMG/Skins/Skin2.png" />
         </label>
         <label>
-          <input type="radio" name="Skin" /><img src="./Data/IMG/Couple.png" />
+          <input type="radio" name="Skin" value="2" onclick="FnSkin()" /><img src="./Data/IMG/Skins/Skin3.png" />
         </label>
         <label>
-          <input type="radio" name="Skin" /><img src="./Data/IMG/Couple.png" />
+          <input type="radio" name="Skin" value="3" onclick="FnSkin()" /><img src="./Data/IMG/Skins/Skin4.png" />
         </label>
       </div>
     </div>
@@ -159,19 +159,19 @@
       <h1>Hình Nền</h1>
       <div class="SCard SBackground">
         <label>
-          <input type="radio" name="Background" /><img src="./Data/IMG/Background/None.png" />
+          <input type="radio" name="Background" value="0" onclick="FnBackground()" /><img src="./Data/IMG/Background/None.png" />
         </label>
         <label>
-          <input type="radio" name="Background" /><img src="./Data/IMG/Background/BG1.jpg" />
+          <input type="radio" name="Background" value="1"  onclick="FnBackground()" /><img src="./Data/IMG/Background/BG1.jpg" />
         </label>
         <label>
-          <input type="radio" name="Background" /><img src="./Data/IMG/Background/BG2.jpg" />
+          <input type="radio" name="Background" value="2"  onclick="FnBackground()" /><img src="./Data/IMG/Background/BG2.jpg" />
         </label>
         <label>
-          <input type="radio" name="Background" /><img src="./Data/IMG/Background/BG3.jpeg" />
+          <input type="radio" name="Background" value="3"  onclick="FnBackground()" /><img src="./Data/IMG/Background/BG3.jpeg" />
         </label>
         <label>
-          <input type="radio" name="Background" checked /><img src="./Data/IMG/Background/BG4.jpg" />
+          <input type="radio" name="Background" value="4"  onclick="FnBackground()" checked /><img src="./Data/IMG/Background/BG4.jpg" />
         </label>
       </div>
     </div>
@@ -188,6 +188,7 @@
 
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./Data/JS/DarkMode.js"></script>
 <script src="./Data/JS/Memory.js"></script>
 <script src="./Data/JS/Stories.js"></script>
