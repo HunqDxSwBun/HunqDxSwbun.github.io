@@ -13,6 +13,28 @@ function openTab(evt, TabMenuName) {
 }
 
 
+var vHideAllDiv = 0;
+function HideAllDiv() {
+  var DDaysLove = document.getElementById('iDivOne');
+  var DMenu = document.getElementById('DMenu');
+
+  vHideAllDiv++;
+
+  if (vHideAllDiv == 1) {
+    DMenu.style.opacity = "0" ;
+  } else {
+    if (vHideAllDiv == 2) {
+      DDaysLove.style.opacity = "0" ;
+    } else {
+      vHideAllDiv = 0;
+      DDaysLove.style.opacity = "1";
+    DMenu.style.opacity = "" ;
+    }
+  }
+}
+
+
+
 var vHieuUng = document.getElementById('vHieuUng');
 
 function FnHieuUng() {
@@ -64,4 +86,57 @@ function FnHieuUng() {
     if (Background == 3) {
       document.body.style.backgroundImage = "url(/Data/IMG/Background/BG3.jpeg)";
     }
+    if (Background == 4) {
+      document.body.style.backgroundImage = "url(/Data/IMG/Background/BG4.jpg)";
+    }
   }
+
+    // Chọn Nhạc Nền
+
+    function FnMusic() {
+ 
+      var MusicBG = document.querySelector('input[name="Music"]:checked').value;
+
+
+      if (MusicBG == 0) {
+        pauseAudio();
+      }
+      if (MusicBG == 1) {
+        vMusicBG.src = "./Data/Music/8Letters.mp3";
+        playAudio();
+      }
+      if (MusicBG == 2) {
+        vMusicBG.src = "./Data/Music/MatMoc.mp3";
+        playAudio();
+      }
+      if (MusicBG == 3) {
+        vMusicBG.src = "./Data/Music/TheGioiTrongEm.mp3"
+        playAudio();
+      }
+      if (MusicBG == 4) {
+        vMusicBG.src = "./Data/Music/InsideTheLines.mp3"
+        playAudio();
+      }
+      if (MusicBG == 5) {
+        vMusicBG.src = "./Data/Music/TropicLove.mp3"
+        playAudio();
+      }
+      if (MusicBG == 6) {
+        vMusicBG.src = "./Data/Music/DuskTillDawn.mp3"
+        playAudio();
+      }
+      
+      
+    }
+
+
+  var vMusicBG = document.getElementById("MusicBG");
+
+  
+  function playAudio() { 
+    vMusicBG.play(); 
+  } 
+  
+  function pauseAudio() { 
+    vMusicBG.pause(); 
+  } 

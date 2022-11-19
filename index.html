@@ -19,6 +19,11 @@
 </head>
 
 <body>
+
+  <audio  id="MusicBG">
+    <source id="MusicURL" type="audio/mpeg">
+  </audio>
+
   <div class="PageLoad" id="PageLoad">
     <div class="centered">
       <div class="blob-1">
@@ -30,7 +35,7 @@
     </div>
   </div>
 
-  <div class="tabMenu">
+  <div class="tabMenu" id="DMenu">
     <button class="tablinks active" onclick="openTab(event, 'DaysLove'), iConDaysLove()"><i
         class="fa-solid fa-heart"></i></button>
     <button class="tablinks" onclick="openTab(event, 'Stories'), iConStories()"><i
@@ -39,9 +44,8 @@
         class="fa-regular fa-calendar"></i></button>
     <button class="tablinks" onclick="openTab(event, 'Setting'),iConSetting()"><i class="fa-solid fa-gear"></i></button>
   </div>
-
-  <div id="DaysLove" class="tabcontent">
-    <div>
+  <div id="DaysLove" class="tabcontent"  >
+    <div id="iDivOne" onclick="HideAllDiv()">
       <div class="card">
         <div class="percent">
           <svg>
@@ -84,7 +88,7 @@
   <div id="Stories" class="tabcontent">
     <div class="Search">
       <label id="mySearch">
-        <input type="search" id="search" autocomplete="off" spellcheck="false" placeholder="Tìm kiếm bài viết nhanh">
+        <input type="search" id="search" autocomplete="off" onfocus="this.value=''" spellcheck="false" placeholder="Tìm kiếm bài viết nhanh">
       </label>
       <div class="Key">
         <button onclick="keyThy()">Thy</button>
@@ -105,7 +109,11 @@
   <div id="Events" class="tabcontent">
     <h3>Sự kiện</h3>
     <p>Các sự kiện sắp diễn ra.</p>
+    <p>Đang Cập Nhật</p>
   </div>
+
+
+  
   <div id="Setting" class="tabcontent">
     <h3>Cài đặt</h3>
     <p>Cài đặt chế độ tối, font chữ,....</p>
@@ -119,11 +127,35 @@
 
     <div class="Card">
       <h1>Nhạc Nền</h1>
-      <div class="Block">
-        <select name="" id="">
-          <option value="0">Tắt</option>
-          <option value="1">8 Letter</option>
-        </select>
+      <div class="SCardM SMusic">
+        <label>
+          <input type="radio" name="Music" value="0" onclick="FnMusic()" checked /> <img src="./Data/IMG/SettingTab/Music/OffMusic.png" >
+          <p>Tắt Nhạc</p>
+        </label>
+        <label>
+          <input type="radio" name="Music" value="1" onclick="FnMusic()" /><img src="./Data/IMG/SettingTab/Music/8Letters.png" >
+          <p>8 Letters</p>
+        </label>
+        <label>
+          <input type="radio" name="Music" value="2" onclick="FnMusic()" /> <img src="./Data/IMG/SettingTab/Music/MatMoc.jpg" >
+          <p>Mặt Mộc</p>
+        </label>
+        <label>
+          <input type="radio" name="Music" value="3" onclick="FnMusic()" /> <img src="./Data/IMG/SettingTab/Music/TheGioiTrongEm.jpg" >
+          <p>Thế Giới Trong Em</p>
+        </label>
+        <label>
+          <input type="radio" name="Music" value="4" onclick="FnMusic()" /> <img src="./Data/IMG/SettingTab/Music/InsideTheLines.jpg" >
+          <p>Inside The Lines</p>
+        </label>
+        <label>
+          <input type="radio" name="Music" value="5" onclick="FnMusic()"/> <img src="./Data/IMG/SettingTab/Music/TropicLove.jpg" >
+          <p>Tropic Love</p>
+        </label>
+        <label>
+          <input type="radio" name="Music" value="6" onclick="FnMusic()"/> <img src="./Data/IMG/SettingTab/Music/DuskTillDawn.jpg" >
+          <p>dusk till dawn</p>
+        </label>
       </div>
     </div>
 

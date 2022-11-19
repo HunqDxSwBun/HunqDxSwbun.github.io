@@ -310,6 +310,41 @@
             }
         }
     }
+    ,{
+        "user": {
+            "userID": 2,
+            "name": [{
+                    "firstName": "Đinh"
+                },
+                {
+                    "lastName": "Mạnh Hùng"
+                }
+            ],
+            "avatar": "https://graph.facebook.com/100045640179308/picture?type=large&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662"
+        },
+        "noidung": "Đã Cập Nhật Phiên Bản VJPPRO Nhất Từ Trước Tới Nay.",
+        "type": "img",
+        "linkfile": "./Data/Stories/IMG/anhst2.png",
+        "display": "block",
+        "meta": {
+            "tags": [
+                "VjpPro 😎"
+            ],
+    
+            "date": "2022-11-19T00:00:00.000Z",
+            "author": {
+                "userID": 2,
+                "name": [{
+                        "firstName": "Đinh"
+                    },
+                    {
+                        "lastName": "Mạnh Hùng"
+                    }
+                ],
+                "avatar": "https://graph.facebook.com/100045640179308/picture?type=large&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662"
+            }
+        }
+    }
     
 
 ]

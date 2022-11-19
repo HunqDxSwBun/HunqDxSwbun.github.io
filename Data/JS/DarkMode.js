@@ -35,7 +35,8 @@ if (darkMode === 'enabled') {
 darkModeToggle.addEventListener('click', () => {
    
     HieuUngDarkMode();
-    setTimeout(CheckDarkMode,500)
+    setTimeout(CheckDarkMode,500);
+   
     function CheckDarkMode() {
         darkMode = localStorage.getItem('darkMode');
 
@@ -50,9 +51,11 @@ darkModeToggle.addEventListener('click', () => {
    
 });
 
+
 function HieuUngDarkMode() {
     Line.style.animation = 'Line 0.8s alternate';
     setTimeout(OffHieuUngDarkMode, 800);
+    
 }
 function OffHieuUngDarkMode() {
     Line.style.animation = '';
