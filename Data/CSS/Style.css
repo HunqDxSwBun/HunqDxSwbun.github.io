@@ -129,7 +129,7 @@ body {
 }
 .tabMenu {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -165,6 +165,10 @@ body {
 }
 
 .tabMenu button.active:nth-child(4) {
+    color: #00ff6a;
+    border-top: 3px solid #00ff6a;
+}
+.tabMenu button.active:nth-child(5) {
     color: pink;
     border-top: 3px solid pink;
 }
@@ -420,11 +424,11 @@ body {
 }
 
 
-#Setting, #Events {
+#Setting, #Events , #Games {
     padding: 10px 20px 60px 20px;
 }
 
-#Setting .Card {
+.Card {
     width: calc(100% - 20px);
     margin: auto;
     padding: 10px ;
@@ -432,12 +436,13 @@ body {
     border-radius: 10px;
     margin: 10px 0;
 }
-#Setting .Card h1 {
+.Card h1 {
     font-size: 20px;
     text-align: left;
     margin-left: 5px;
     margin-bottom: 15px;
 }
+
 .DarkModeD {
     position: fixed;
     top: 0;
@@ -536,3 +541,10 @@ body {
 .SCardM input[type="radio"]:checked + img {
     background-color: pink;
   }
+
+#Games .Card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #00c3ff;
+}

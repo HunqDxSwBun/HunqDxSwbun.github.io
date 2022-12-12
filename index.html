@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
   <audio  id="MusicBG">
     <source id="MusicURL" type="audio/mpeg">
   </audio>
@@ -42,7 +41,9 @@
         class="fa-solid fa-book"></i></button>
     <button class="tablinks" onclick="openTab(event, 'Events'),iConEvents()"><i
         class="fa-regular fa-calendar"></i></button>
+        <button class="tablinks" onclick="openTab(event, 'Games'),iConGames()"><i class="fa-solid fa-gamepad"></i></button>
     <button class="tablinks" onclick="openTab(event, 'Setting'),iConSetting()"><i class="fa-solid fa-gear"></i></button>
+
   </div>
   <div id="DaysLove" class="tabcontent"  >
     <div id="iDivOne" onclick="HideAllDiv()">
@@ -109,10 +110,20 @@
   <div id="Events" class="tabcontent">
     <h3>Sự kiện</h3>
     <p>Các sự kiện sắp diễn ra.</p>
-    <p>Đang Cập Nhật</p>
   </div>
 
-
+  <div id="Games" class="tabcontent">
+    <h3>Game</h3>
+    <div class="Card">
+      <h1>Dữ liệu gần đây</h1>
+      <img id="AvatarPlayer" src="./Data/IMG/2021BTN.jpg" >
+      <h2 id="NamePlayer"></h2>
+      <h3 id="LevelPlayer"></h3>
+      <button onclick="getBackup()">Kiểm tra dữ liệu khôi phục</button>
+     
+      
+    </div>
+  </div>
   
   <div id="Setting" class="tabcontent">
     <h3>Cài đặt</h3>
@@ -217,10 +228,9 @@
 
 
 
-
-
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./Data/JS/LocalStorage.js"></script>
 <script src="./Data/JS/DarkMode.js"></script>
 <script src="./Data/JS/Memory.js"></script>
 <script src="./Data/JS/Stories.js"></script>

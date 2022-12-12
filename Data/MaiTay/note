@@ -1,0 +1,26 @@
+ <input type="radio" name="cattoc" value="Bike">
+        <label for="dichvu">Combo cắt, gội, sấy tạo kiểu</label><br>
+
+        <h2>Uốn</h2>
+        <input type="radio" name="uoctoc" value="Bike">
+        <label for="uoctoc">Uốn thường</label><br>
+        <input type="radio" name="uoctoc" value="Bike">
+        <label for="uoctoc">Uốn phồng chân tóc</label><br>
+
+        <h2>Duỗi</h2>
+        <input type="radio" name="duoitoc" value="Bike">
+        <label for="duoitoc">Duỗi tự nhiên</label><br>
+
+        <h2>Nhuộm</h2>
+        <input type="radio" name="nhuomtoc" value="Bike">
+        <label for="nhuomtoc">Nhuộm phục hồi màu cơ bản</label><br>
+        <input type="radio" name="nhuomtoc" value="Bike">
+        <label for="nhuomtoc">Nhộm màu thời trang</label><br>
+        <input type="radio" name="nhuomtoc" value="Bike">
+        <label for="nhuomtoc">HightLight - Baby Light</label><br>
+
+        <h2>Phục hồi</h2>
+        <input type="radio" name="phuchoitoc" value="Bike">
+        <label for="phuchoitoc">Phục hồi Olaplex</label><br>
+        <input type="radio" name="phuchoitoc" value="Bike">
+        <label for="phuchoitoc">Phục hồi Keratin</label><br>

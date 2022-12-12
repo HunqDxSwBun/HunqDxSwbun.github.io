@@ -47,6 +47,10 @@ function iConEvents() {
     iConPageLoad.textContent = "📅";
     OnPageLoad();
 }
+function iConGames() {
+    iConPageLoad.textContent = "🎮";
+    OnPageLoad();
+}
 function iConSetting() {
     iConPageLoad.textContent = "⚙";
     OnPageLoad();

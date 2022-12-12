@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!-- Shift + Alt + F  để sắp xếp lại code ( format code )-->
+<html>
+
+<head>
+    <!-- Tiêu đề trang -->
+    <title>HunqD x Swbun</title>
+
+    <!-- Bộ giải mã và phân loại thiết bị -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- CSS của web -->
+    <link rel="stylesheet" href="./Data/CSS/Style.css" />
+    <link rel="stylesheet" type="text/css" href="/Data/Data3/print.min.css">
+
+    <!-- FontAweSome fas fa icon -->
+    <script src="https://kit.fontawesome.com/9392097706.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="Header hide">
+        <img src="./Data/IMG/Logo.png" alt="LOGO">
+    </header>
+    <div class="Card">
+        <h1>Tên khách hàng</h1>
+        <input type="text" id="TenKH">
+        <p class="Note">Tích điểm dành cho hội viên.</p>
+        <button class="BTN" onclick="Get()">Kiểm Tra</button>
+    </div>
+
+
+
+    <div class="Card">
+        <h1>Dịch Vụ</h1>
+        <hr>
+        <div class="DichVu">
+            <div class="Head">
+                <h2>Cắt Tóc</h2>
+                <button class="Restone" onclick="RS1()">đặt lại</button>
+            </div>
+
+            <p class="hide">
+                <input type="radio" id="CT0" name="CatToc" value="0" checked>
+                <label for="CT0">Không</label>
+            </p>
+
+            <p>
+                <input type="radio" id="CT1" name="CatToc" value="1">
+                <label for="CT1">Cắt tóc</label>
+            </p>
+            <p>
+                <input type="radio" id="CT2" name="CatToc" value="2">
+                <label for="CT2">Combo cắt, gội, sấy tạo kiểu</label>
+            </p>
+        </div>
+
+        <div class="DichVu">
+            <div class="Head">
+                <h2>Uốn Tóc</h2>
+                <button class="Restone" onclick="RS2()">đặt lại</button>
+            </div>
+
+            <p class="hide">
+                <input type="radio" id="UT0" name="UocToc" value="0" checked>
+                <label for="UT0">Không</label>
+            </p>
+
+            <p>
+                <input type="radio" id="UT1" name="UocToc" value="1">
+                <label for="UT1">Uốn thường</label>
+            </p>
+            <p>
+                <input type="radio" id="UT2" name="UocToc" value="2">
+                <label for="UT2">Uốn phông chân tóc</label>
+            </p>
+        </div>
+
+        <div class="DichVu">
+            <div class="Head">
+                <h2>Duỗi Tóc</h2>
+                <button class="Restone" onclick="RS3()">đặt lại</button>
+            </div>
+            <p class="hide">
+                <input type="radio" id="DT0" name="DuoiToc" value="0" checked>
+                <label for="DT0">Không</label>
+            </p>
+            <p>
+                <input type="radio" id="DT1" name="DuoiToc" value="1">
+                <label for="DT1">Duỗi tư nhiên</label>
+            </p>
+        </div>
+
+        <div class="DichVu">
+            <div class="Head">
+                <h2>Nhuộm Tóc</h2>
+                <button class="Restone" onclick="RS4()">đặt lại</button>
+            </div>
+
+            <p class="hide">
+                <input type="radio" id="NT0" name="NhuomToc" value="0" checked>
+                <label for="NT0">Không</label>
+            </p>
+
+            <p>
+                <input type="radio" id="NT1" name="NhuomToc" value="1">
+                <label for="NT1">Nhuộm phục hồi màu cơ bản</label>
+            </p>
+            <p>
+                <input type="radio" id="NT2" name="NhuomToc" value="2">
+                <label for="NT2">Nhộm màu thời trang</label>
+            </p>
+            <p>
+                <input type="radio" id="NT3" name="NhuomToc" value="3">
+                <label for="NT3">HightLight - Baby Light</label>
+            </p>
+
+        </div>
+
+        <div class="DichVu">
+            <div class="Head">
+                <h2>Phục Hồi Tóc</h2>
+                <button class="Restone" onclick="RS5()">đặt lại</button>
+            </div>
+
+            <p class="hide">
+                <input type="radio" id="PHT0" name="PhucHoiToc" value="0" checked>
+                <label for="PHT0">Không</label>
+            </p>
+            <p>
+                <input type="radio" id="PHT1" name="PhucHoiToc" value="1">
+                <label for="PHT1">Phục hồi Olaplex</label>
+            </p>
+            <p>
+                <input type="radio" id="PHT2" name="PhucHoiToc" value="2">
+                <label for="PHT2">Phục hồi Keratin</label>
+            </p>
+        </div>
+
+        <div class="DichVu">
+            <div class="Head">
+                <h2>Combo - Gói</h2>
+                <button class="Restone" onclick="RS6()">đặt lại</button>
+            </div>
+
+            <p class="hide">
+                <input type="radio" id="CB0" name="Combo" value="0" checked>
+                <label for="CB0">Không</label>
+            </p>
+            <p>
+                <input type="radio" id="CB1" name="Combo" value="1">
+                <label for="CB1">Combo 1 </label>
+                <span class="Note">Bao gồm: cắt tóc uốn duỗi</span>
+            </p>
+            <p>
+                <input type="radio" id="CB2" name="Combo" value="2">
+                <label for="CB2">Combo 2</label>
+            </p>
+            <p>
+                <input type="radio" id="CB3" name="Combo" value="3">
+                <label for="CB3">Combo 3</label>
+            </p>
+        </div>
+
+        <div class="DichVu">
+            <div class="Head">
+                <h2>Tuỳ chỉnh</h2>
+            </div>
+
+            <h2>Tên dịch vụ</h2>
+            <input type="text">
+            <h2>Giá dịch vụ</h2>
+            <input type="text">
+        </div>
+
+    </div>
+
+    <div class="Card">
+        <h1>Khuyến Mãi</h1>
+        <hr>
+        <input type="number" id="phantramgiamgia" value="0">
+        <p class="Note">Giảm giá theo phần trăm</p>
+        <br>
+        <br>
+        <input type="number" placeholder="Tiền" onchange="fmMoney()" id="idMoney">
+        <p class="Note">Giảm giá trực tiếp giá tiền</p>
+        <p id="fmMoney"></p>
+
+        <button class="BTN" onclick="Check()">Tính</button>
+    </div>
+
+    <div class="Card Bill" id="Bill">
+        <!-- <div class="Logo">
+            <img src="./Data/IMG/Logo.png" alt="LOGO" srcset="">
+        </div> -->
+        <hr>
+        <div class="Contact">
+            <h5>ĐC: Tổ 1, ấp Hiền Hoà, xã Phước Thái, Huyện Long Thành, Đồng Nai</h5>
+            <h5>SĐT:0938.123.962</h5>
+        </div>
+        <br>
+        <br>
+        <h1>Hoá đơn thanh toán</h1>
+        <p>Số Phiếu:</p>
+        <p>Ngày:12/12/2022</p>
+        <p>Khách Hàng: Mới</p>
+
+
+        <table id="myTable">
+            <tr>
+                <th>Dịch Vụ</th>
+                <th>SL</th>
+                <th>Đơn Giá</th>
+                <th>Thành Tiền</th>
+            </tr>
+        </table>
+        <h4>Tổng: 1.000.000đ</h4>
+        <h5>Giảm 10%: 100.000đ</h5>
+        <h5>Thanh Toán: 900.000đ</h5>
+        <h5>Khách đưa: 1.000.000đ</h5>
+        <h5>Trả khách: 100.000đ</h5>
+
+        <p>Xin cảm ơn quý khách - Hẹn gặp lại</p>
+        <h5>Stk: xxxx.xxxx.xxxx DINH HOA XUAN MAI VIETCOMBANK</h5>
+        <button type="button" onclick="TaoBang1()">Try it</button>
+        <button onclick="HideCard()">Click</button>
+        <button id="print" onclick="InHoaDon();" >Print</button>
+    </div>
+
+
+    <div class="Card">
+        
+    </div>
+
+
+    <div class="Info">
+        <p>Thiết kế lập trình bởi HunqD</p>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./Data/JS/File.js"></script>
+<script src="./Data/JS/Systems.js"></script>
+<script src="/Data/Data3/print.min.js"></script>
+
+</html>
