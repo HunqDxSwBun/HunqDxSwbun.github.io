@@ -22,8 +22,6 @@ var Combo2 = 1000000;
 var A = 0;
 var B = 0;
 function Get() {
-    var TenKH = document.getElementById('TenKH').value;
-
     // Cắt Tóc
     var dvCatToc = document.querySelector('input[name="CatToc"]:checked').value;
     if (dvCatToc == 0) {
@@ -109,9 +107,117 @@ function Get() {
 
 
     var moneyFormatter = new Intl.NumberFormat();
-    alert(moneyFormatter.format(ThanhToan) + 'đ');
+
+    var checkTongHoaDon = document.getElementById('checkTongHoaDon');
+    var checkGiamGia = document.getElementById('checkGiamGia');
+    var checkThanhToan = document.getElementById('checkThanhToan');
+
+
+    var TienKhachDua = document.getElementById('TienKhachDua');
+    var TienTraKhach = document.getElementById('TienTraKhach');
+    
+
+
+    var outTongHoaDon = document.getElementById('TongHoaDon');
+    var outGiamGia = document.getElementById('GiamGia');
+    var outThanhToan = document.getElementById('ThanhToan');
+    var outTienKhachDua = document.getElementById('KhachDua');
+    var outTienTraKhach = document.getElementById('TraKhach');
+
+    outTienKhachDua.innerText = 'Khách đưa: ' + moneyFormatter.format(TienKhachDua.value) + 'đ' ;
+    outTienTraKhach.innerText = 'Trả khách: ' + moneyFormatter.format(TienKhachDua.value - ThanhToan) + 'đ' 
+
+    outTongHoaDon.innerText = 'Tổng: ' + moneyFormatter.format(Tong);
+
+
+    if (GiamGia == 0) {
+        outGiamGia.innerText = 'Giảm 0%'
+    } else {
+        outGiamGia.innerText = 'Giảm ' + GiamGia + '% : ' + moneyFormatter.format(((Tong*GiamGia)/100)) + 'đ'  ;
+    }
+   
+    outThanhToan.innerText = 'Thanh Toán: ' + moneyFormatter.format(ThanhToan) + 'đ'
+
+
+    
+    checkTongHoaDon.innerText = outTongHoaDon.textContent;
+    checkGiamGia.innerText = outGiamGia.textContent;
+    checkThanhToan.innerText = outThanhToan.textContent;
+    TienTraKhach.innerText = outTienTraKhach.textContent;
 
 }
+
+function Check() {
+    var dvCatToc = document.querySelector('input[name="CatToc"]:checked').value;
+    alert(dvCatToc)
+}
+
+function CachThanhToan() {
+   var CachThanhToan = document.getElementById('CachThanhToan').value;
+   var TienMat = document.getElementById('TienMat');
+   var ChuyenKhoang = document.getElementById('ChuyenKhoang');
+
+   var PayTienMat = document.getElementById('PayTienMat');
+   var PayChuyenKhoang = document.getElementById('PayChuyenKhoang');
+
+
+   if (CachThanhToan == 0) {
+    TienMat.style.display = 'block';
+    ChuyenKhoang.style.display = 'none';
+
+    PayTienMat.style.display = 'block';
+    PayChuyenKhoang.style.display = 'none';
+   } 
+   if (CachThanhToan == 1) {
+    TienMat.style.display = 'none';
+    ChuyenKhoang.style.display = 'block';
+
+    PayTienMat.style.display = 'none';
+    PayChuyenKhoang.style.display = 'block';
+   }
+   
+}
+
+
+function KhachHang() { 
+    var TenKH = document.getElementById('TenKH').value;
+
+    var outTenKhachHang = document.getElementById('TenKhachHang');
+    var outLoaiKhachHang = document.getElementById('LoaiKhachHang');
+
+    if (TenKH == 'Mạnh Hùng') {
+        outTenKhachHang.innerText = TenKH ;
+        outLoaiKhachHang.innerText = '[ Thành viên ]' ;
+    }else {
+        outTenKhachHang.innerText = TenKH ;
+        outLoaiKhachHang.innerText = '[ Mới ]'
+    }
+
+}
+
+function NgayDonHang() {
+    var days = ['Chủ nhật','Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy'];
+
+    Date.prototype.getDayName = function() {
+        return days[ this.getDay() ];
+    };
+
+    var now = new Date();
+
+    var thu = now.getDayName();
+    var ngay = now.getDate();
+    var thang = now.getMonth();
+    var nam = now.getFullYear();
+
+    var NgayHoaDon = document.getElementById('NgayHoaDon');
+    NgayHoaDon.innerHTML = thu + '. ' + ngay + '/' + thang + '/' + nam; 
+}
+
+function TaoDonHang() {
+    NgayDonHang();
+    KhachHang();
+}
+
 
 
 var SLTaoBang = 0;
@@ -134,12 +240,12 @@ function TaoBang() {
     var row = table.insertRow(1);
     var DichVu = row.insertCell(0);
     var SoLuong = row.insertCell(1);
-    var DonGia = row.insertCell(2);
-    var ThanhTien = row.insertCell(3);
-    DichVu.innerHTML = "Nhuộm phục hồi màu cơ bản";
+    var ThanhTien = row.insertCell(2);
+
+    DichVu.innerHTML = "Combo cắt, gội, sấy tạo kiểu";
     SoLuong.innerHTML = "2";
-    DonGia.innerHTML = "500.000đ";
-    ThanhTien.innerHTML = "1.000.000đ";
+    ThanhTien.innerHTML = "500.000đ";
+  
 }
 
 function TaoBangKhac() {
@@ -147,11 +253,9 @@ function TaoBangKhac() {
     var row = table.insertRow(6);
     var DichVu = row.insertCell(0);
     var SoLuong = row.insertCell(1);
-    var DonGia = row.insertCell(2);
-    var ThanhTien = row.insertCell(3);
+    var ThanhTien = row.insertCell(2);
 
     DichVu.innerHTML = "Khác";
     SoLuong.innerHTML = "0";
-    DonGia.innerHTML = "500.000đ";
     ThanhTien.innerHTML = "1.000.000đ";
 }

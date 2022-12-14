@@ -13,7 +13,7 @@
 
     <!-- CSS của web -->
     <link rel="stylesheet" href="./Data/CSS/Style.css" />
-    <link rel="stylesheet" type="text/css" href="/Data/Data3/print.min.css">
+
 
     <!-- FontAweSome fas fa icon -->
     <script src="https://kit.fontawesome.com/9392097706.js" crossorigin="anonymous"></script>
@@ -24,10 +24,12 @@
         <img src="./Data/IMG/Logo.png" alt="LOGO">
     </header>
     <div class="Card">
-        <h1>Tên khách hàng</h1>
-        <input type="text" id="TenKH">
+        <h1>khách hàng</h1>
+        <input type="text" id="TenKH" placeholder="Tên khách hàng">
+        <h4 style="text-align: center; margin: 5px 0;">Hoặc</h4>
+        <input type="number" id="sdtKH" placeholder="Số điện thoại khách hàng">
         <p class="Note">Tích điểm dành cho hội viên.</p>
-        <button class="BTN" onclick="Get()">Kiểm Tra</button>
+        <button class="BTN" onclick="Check()">Kiểm Tra</button>
     </div>
 
 
@@ -179,58 +181,108 @@
     <div class="Card">
         <h1>Khuyến Mãi</h1>
         <hr>
-        <input type="number" id="phantramgiamgia" value="0">
         <p class="Note">Giảm giá theo phần trăm</p>
+        <input type="number" id="phantramgiamgia" value="0" onfocus="this.value=''">
         <br>
         <br>
-        <input type="number" placeholder="Tiền" onchange="fmMoney()" id="idMoney">
         <p class="Note">Giảm giá trực tiếp giá tiền</p>
-        <p id="fmMoney"></p>
+        <input type="number" placeholder="Tiền" onchange="fmMoney()" id="idMoney">
 
-        <button class="BTN" onclick="Check()">Tính</button>
+        <p id="fmMoney"></p>
+        <button class="BTN" onclick="Get()">Áp dụng</button>
     </div>
 
+    <div class="Card">
+        <h1>Hoá Đơn</h1>
+        <hr>
+        <select id="CachThanhToan" onchange="CachThanhToan()">
+            <option value="0">Tiền Mặt</option>
+            <option value="1">Chuyển Khoản</option>
+        </select>
+      
+
+
+        <div class="CheckThanhToan">
+            <h2 id="checkTongHoaDon"></h2>
+            <h2 id="checkGiamGia"></h2>
+            <h1 id="checkThanhToan"></h1>
+        </div>
+
+        <div id="TienMat">
+            <p class="Note">Khách đưa </p>
+            <input type="text" id="TienKhachDua" onkeyup="fmMoney2()">
+            <div id="DIVTienTraKhach" class="hide">
+                <h2>Khách đưa: <span id="fmMoney2"></span></h2>
+                <h2>Tiền trả lại khách: <span id="TienTraKhach"></span></h2>
+                <button class="BTN" onclick="Get()">Tính</button>
+            </div>
+        </div>
+        <div id="ChuyenKhoang" class="hide">
+            <img src="./Data/IMG/LOGO-Vietcombank.png" alt="" srcset="">
+            <h1>DINH HOA XUAN MAI</h1>
+            <h1>0123456789</h1>
+            <p>Hoặc</p>
+            <br>
+            <img src="./Data/IMG/QR-Banking.png" srcset="">
+        </div>
+
+        
+    </div>
+
+
     <div class="Card Bill" id="Bill">
-        <!-- <div class="Logo">
+        <div class="Logo">
             <img src="./Data/IMG/Logo.png" alt="LOGO" srcset="">
-        </div> -->
+        </div>
         <hr>
         <div class="Contact">
             <h5>ĐC: Tổ 1, ấp Hiền Hoà, xã Phước Thái, Huyện Long Thành, Đồng Nai</h5>
             <h5>SĐT:0938.123.962</h5>
         </div>
         <br>
-        <br>
         <h1>Hoá đơn thanh toán</h1>
-        <p>Số Phiếu:</p>
-        <p>Ngày:12/12/2022</p>
-        <p>Khách Hàng: Mới</p>
-
+        <!-- <p>Số Phiếu:</p> -->
+        <div class="InfoBill">
+            <p id="NgayHoaDon">Ngày</p>
+            <p>Khách Hàng: <b id="TenKhachHang"></b> <span id="LoaiKhachHang"></span></p>
+            <p>SĐT: ******1234</p>
+        </div>
 
         <table id="myTable">
             <tr>
                 <th>Dịch Vụ</th>
                 <th>SL</th>
-                <th>Đơn Giá</th>
                 <th>Thành Tiền</th>
             </tr>
         </table>
-        <h4>Tổng: 1.000.000đ</h4>
-        <h5>Giảm 10%: 100.000đ</h5>
-        <h5>Thanh Toán: 900.000đ</h5>
-        <h5>Khách đưa: 1.000.000đ</h5>
-        <h5>Trả khách: 100.000đ</h5>
+        <div class="Pay">
+            <h1 id="TongHoaDon">Tổng</h1>
+            <p id="GiamGia">Giảm giá</p>
+            <h2 id="ThanhToan">Thanh Toán</h2>
 
-        <p>Xin cảm ơn quý khách - Hẹn gặp lại</p>
-        <h5>Stk: xxxx.xxxx.xxxx DINH HOA XUAN MAI VIETCOMBANK</h5>
+            <div id="PayTienMat" >
+                <h5> <span id="KhachDua"></span> | <span id="TraKhach"></span></h5>
+            </div>
+           <div id="PayChuyenKhoang" class="hide">
+            <h5>Chuyển khoảng</h5>
+           </div>
+
+        </div>
+        <br><br>
+        <div>
+            <p>Xin cảm ơn quý khách - Hẹn gặp lại</p>
+        </div>
+
         <button type="button" onclick="TaoBang1()">Try it</button>
         <button onclick="HideCard()">Click</button>
-        <button id="print" onclick="InHoaDon();" >Print</button>
+        <button id="print" onclick="InHoaDon();">Print</button>
+
+        <button onclick="TaoDonHang()">Thông Báo</button>
     </div>
 
 
     <div class="Card">
-        
+
     </div>
 
 
@@ -242,6 +294,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./Data/JS/File.js"></script>
 <script src="./Data/JS/Systems.js"></script>
-<script src="/Data/Data3/print.min.js"></script>
+
 
 </html>

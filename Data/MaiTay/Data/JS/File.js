@@ -40,16 +40,22 @@ document.getElementById('fmMoney').innerText = moneyFormatter.format(GiamGiaTien
 
 }
 
+function fmMoney2() {
+    var TienKhachDua = document.getElementById('TienKhachDua').value;
+    document.getElementById('DIVTienTraKhach').style.display = 'block';
+
+
+var moneyFormatter = new Intl.NumberFormat();
+document.getElementById('fmMoney2').innerText = moneyFormatter.format(TienKhachDua)+'đ';
+
+Get();
+
+}
+
 // In Hoá Đơn 
 
 function InHoaDon() {
-
-
-    printJS({
-        printable: 'Bill',
-        type: 'html',
-        targetStyle:['print']
-    })
+    alert('Đang cập nhật')
 }
 
 
