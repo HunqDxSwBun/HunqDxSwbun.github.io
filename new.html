@@ -18,7 +18,7 @@
     <script src="https://kit.fontawesome.com/9392097706.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body >
 
     <div class="tabMenu">
         <button class="tablinks active" onclick="openTab(event, 'Home')">
@@ -57,17 +57,57 @@
                 <span class="timeel timeRefSeconds"></span>
             </div>
             <div class="MoneyLove">
-               <img src="./DataGame/IMG/iconHead/heart.png" alt="" srcset="">
-                <p>999.999</p>
+                <img src="./DataGame/IMG/iconHead/heart.png" alt="" srcset="">
+                <p>1.000</p>
             </div>
         </div>
     </div>
 
+    <div id="Chat">
+        <div class="Chat">
+            <div class="Figure" >
+                <img id="FigureAvatar" src="./DataGame/IMG/Figure/HunqD/AvatarHunqD.png" alt="" srcset="">
+            </div>
+            <div class="Content">
+                <div class="Block">
+                    <h1 id="FigureName">HunqD</h1>
+                    <div class="ControlSound">
+                        <i id="ControlSound" onclick="VolSound()" class="fa-solid fa-volume-high"></i>
+                    </div>
+                    <i onclick="ChatOff()" class="fa-regular fa-circle-xmark"></i>
+                </div>
+                
+                <p id="FigureChat">Thy đúng bị khùng haha</p>
+                
+            </div>
+            <audio id="FigureSound">
+                <source id="FigureSoundLink" src="" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+        
+    </div>
+
+
     <div id="Home" class="tabcontent Show">
         <div class="Home">
-            <!-- <h1>Nhà</h1> -->
-            <img src="./DataGame/IMG/Home/wall.png" alt="" srcset="">
+            <div class="LightEffect" id="LightEffect">
+                <img src="./DataGame/IMG/Home/LightEffect.gif" alt="" srcset="">
+            </div>
+            
+            <div class="Figure">
+                <div class="HunqD">
+                    <h1>Mạnh Hùng</h1>
+                    <img src="./DataGame/IMG/Figure/HunqD/HunqD1.PNG" alt="HunqD" onclick="ClickHunqD()">
+                </div>
+                <div class="SwBun">
+                    <h1>Thy Thy</h1>
+                    <img src="./DataGame/IMG/Figure/SwBun/SwBun1.PNG" alt="SwBun" onclick="ClickSwBun()">
+                </div>
+            </div>
         </div>
+
+
     </div>
 
     <div id="BedRoom" class="tabcontent">
@@ -87,29 +127,31 @@
             <h1>Nhật kí</h1>
             <div class="Search">
                 <label id="mySearch">
-                  <input type="search" id="search" autocomplete="off" onfocus="this.value=''" spellcheck="false" placeholder="Tìm kiếm bài viết nhanh">
+                    <input type="search" id="search" autocomplete="off" onfocus="this.value=''" spellcheck="false"
+                        placeholder="Tìm kiếm bài viết nhanh">
                 </label>
                 <div class="Key">
-                  <button onclick="keyThy()">Thy</button>
-                  <button onclick="keyHung()">Hùng</button>
-                  <button onclick="key2022()">2022</button>
-                  <button onclick="key2021()">2021</button>
+                    <button onclick="keyThy()">Thy</button>
+                    <button onclick="keyHung()">Hùng</button>
+                    <button onclick="key2022()">2022</button>
+                    <button onclick="key2021()">2021</button>
                 </div>
                 <div class="UploadPost">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSde9tM_Wfx0srpT2S5tHR-cJBFp8ACqxkpm3BH3tQhuMCIeLg/viewform?usp=pp_url">
-                    <button>Đăng Bài Viết</button>
-                  </a>
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSde9tM_Wfx0srpT2S5tHR-cJBFp8ACqxkpm3BH3tQhuMCIeLg/viewform?usp=pp_url">
+                        <button>Đăng Bài Viết</button>
+                    </a>
                 </div>
-              </div>
-          
-              <div class="container">
+            </div>
+
+            <div class="container">
                 <div class="post-container">
-          
+
                 </div>
                 <button class="btn btn--view">Xem nhật kí cũ hơn</button>
-              </div>
+            </div>
         </div>
-       
+
     </div>
 
     <div id="StoreHouse" class="tabcontent">
@@ -126,5 +168,6 @@
 <script src="./DataGame/JS/Memory.js"></script>
 <script src="./Data/JS/Stories.js"></script>
 
+<script src="./DataGame/JS/Figure/Chat.js"></script>
 
 </html>

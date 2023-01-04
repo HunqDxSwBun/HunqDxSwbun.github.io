@@ -98,16 +98,87 @@ body {
     font-weight: bold;
     margin: 3px 0 auto 0;
 }
+#Chat {
+    display: none;
+}
+.Chat {
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 10px;
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    width: calc(100% - 30px);
+    background-color: rgba(255, 255, 255, 0.849);
+    padding: 10px 5px;
+    border-radius: 20px;
+}
+
+.Chat .Figure img {
+    height: 100px;
+}
+.Chat .Content {
+    padding-right: 10px ;
+}
+.Chat .Content h1 {
+    font-size: 20px;
+    margin-bottom: 5px ;
+}
+
+.Chat .Content .Block {
+    display: grid;
+    grid-template-columns: auto 30px 30px;
+    gap: 10px;
+}
+.Chat .Content .Block  i {
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+
+
+
+
 
 .Home {
     background-color: #cb987a;
-    height: 100vh;
+    height: 90vh;
+    background-image: url(/DataGame/IMG/Home/wall.png);
+    background-size: cover;
 }
-.Home img {
+.Home .LightEffect {
+    display: none;
+}
+.Home .LightEffect img {
     width: 100%;
 }
+.Home .Figure {
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.Home .Figure div h1{
+    font-size: 16px;
+}
+.Home .Figure img{
+    height: 160px;
+}
+.Home .Figure .HunqD {
+    color: #0077ff;
+    text-shadow: 0 0 3px #d8d8d8;
+}
 
-
+.Home .Figure .SwBun {
+    color: #ff2fc0;
+    text-shadow: 0 0 3px #d8d8d8;
+}
+.Home .Figure .SwBun img {
+    height: 152px;
+}
 
 
 
