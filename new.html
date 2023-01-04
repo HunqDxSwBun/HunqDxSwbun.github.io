@@ -21,16 +21,22 @@
 <body>
 
     <div class="tabMenu">
-        <button class="tablinks active" onclick="openTab(event, 'Home'), iConDaysLove()">
-            <img src="./DataGame/IMG/iconMenu/house.png" alt="Nhà">
+        <button class="tablinks active" onclick="openTab(event, 'Home')">
+            <img src="./DataGame/IMG/iconMenu/living-room.png" alt="Nhà">
         </button>
-        <button class="tablinks" onclick="openTab(event, 'Shop'), iConStories()">
+        <button class="tablinks" onclick="openTab(event, 'BedRoom')">
+            <img src="./DataGame/IMG/iconMenu/bed.png" alt="Phòng Ngủ">
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Shop')">
             <img src="./DataGame/IMG/iconMenu/shop.png" alt="Cửa hàng">
         </button>
-        <button class="tablinks" onclick="openTab(event, 'Storie'),iConGames()">
+        <button class="tablinks" onclick="openTab(event, 'Quest')">
+            <img src="./DataGame/IMG/iconMenu/quest.png" alt="Nhiệm vụ">
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Storie')">
             <img src="./DataGame/IMG/iconMenu/tale.png" alt="Nhật kí">
         </button>
-        <button class="tablinks" onclick="openTab(event, 'StoreHouse'),iConEvents()">
+        <button class="tablinks" onclick="openTab(event, 'StoreHouse')">
             <img src="./DataGame/IMG/iconMenu/package.png" alt="Nhà kho">
         </button>
 
@@ -57,16 +63,26 @@
         </div>
     </div>
 
-    <div id="Home" class="tabcontent">
-        
-        <h1>Nhà</h1>
+    <div id="Home" class="tabcontent Show">
+        <div class="Home">
+            <h1>Nhà</h1>
+            <img src="./DataGame/IMG/Home/Thiết kế chưa có tên.png" alt="" srcset="">
+        </div>
+    </div>
+
+    <div id="BedRoom" class="tabcontent">
+        <h1>Phòng ngủ</h1>
     </div>
 
     <div id="Shop" class="tabcontent">
         <h1>Cửa Hàng</h1>
     </div>
 
-    <div id="Storie" class="tabcontent Show">
+    <div id="Quest" class="tabcontent">
+        <h1>Nhiệm vụ</h1>
+    </div>
+
+    <div id="Storie" class="tabcontent ">
         <div class="BlockStorie">
             <h1>Nhật kí</h1>
             <div class="Search">

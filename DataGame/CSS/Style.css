@@ -11,7 +11,8 @@ body {
     width: 100%;
     bottom: 0;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 20% 20% 20% 20% 20% 20%;
+    overflow-x: auto;
     background-color: bisque;
     padding: 10px 0;
 }
@@ -97,6 +98,19 @@ body {
     font-weight: bold;
     margin: 3px 0 auto 0;
 }
+
+
+.Home img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
 
 
 
