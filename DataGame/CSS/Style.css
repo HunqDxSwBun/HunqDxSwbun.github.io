@@ -99,7 +99,10 @@ body {
     margin: 3px 0 auto 0;
 }
 
-
+.Home {
+    background-color: #cb987a;
+    height: 100vh;
+}
 .Home img {
     width: 100%;
 }
