@@ -65,8 +65,7 @@ function iConSetting() {
 
 
 function OnLOAD() {
-    LoveMemory();
-    // countUpFromTime("July 15, 2021 00:00:00", 'DaysLoveJS'); // ****** Change this line!
+    countUpFromTime("July 15, 2021 00:00:00", 'DaysLoveJS'); // ****** Change this line!
 }
 function countUpFromTime(countFrom, id) {
     countFrom = new Date(countFrom).getTime();

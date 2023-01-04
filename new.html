@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!-- Shift + Alt + F  để sắp xếp lại code ( format code )-->
+<html>
+
+<head>
+    <!-- Tiêu đề trang -->
+    <title>HunqD x Swbun</title>
+
+    <!-- Bộ giải mã và phân loại thiết bị -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- CSS của web -->
+    <link rel="stylesheet" href="/DataGame/CSS/Style.css" />
+
+    <!-- FontAweSome fas fa icon -->
+    <script src="https://kit.fontawesome.com/9392097706.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="tabMenu">
+        <button class="tablinks active" onclick="openTab(event, 'Home'), iConDaysLove()">
+            <img src="./DataGame/IMG/iconMenu/house.png" alt="Nhà">
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Shop'), iConStories()">
+            <img src="./DataGame/IMG/iconMenu/shop.png" alt="Cửa hàng">
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Storie'),iConGames()">
+            <img src="./DataGame/IMG/iconMenu/tale.png" alt="Nhật kí">
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'StoreHouse'),iConEvents()">
+            <img src="./DataGame/IMG/iconMenu/package.png" alt="Nhà kho">
+        </button>
+
+    </div>
+
+    <div class="Head" id="DaysLoveJS">
+        <div class="Day">
+            <h1 class="timeel days" id="iDaysLove">535</h1>
+        </div>
+
+        <div class="Block">
+            <div class="Hour">
+                <span class="timeel hours">00</span>
+                <span class="timeel timeRefHours">:</span>
+                <span class="timeel minutes">00</span>
+                <span class="timeel timeRefMinutes">:</span>
+                <span class="timeel seconds">00</span>
+                <span class="timeel timeRefSeconds"></span>
+            </div>
+            <div class="MoneyLove">
+               <img src="./DataGame/IMG/iconHead/heart.png" alt="" srcset="">
+                <p>999.999</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Home" class="tabcontent">
+        
+        <h1>Nhà</h1>
+    </div>
+
+    <div id="Shop" class="tabcontent">
+        <h1>Cửa Hàng</h1>
+    </div>
+
+    <div id="Storie" class="tabcontent Show">
+        <div class="BlockStorie">
+            <h1>Nhật kí</h1>
+            <div class="Search">
+                <label id="mySearch">
+                  <input type="search" id="search" autocomplete="off" onfocus="this.value=''" spellcheck="false" placeholder="Tìm kiếm bài viết nhanh">
+                </label>
+                <div class="Key">
+                  <button onclick="keyThy()">Thy</button>
+                  <button onclick="keyHung()">Hùng</button>
+                  <button onclick="key2022()">2022</button>
+                  <button onclick="key2021()">2021</button>
+                </div>
+                <div class="UploadPost">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSde9tM_Wfx0srpT2S5tHR-cJBFp8ACqxkpm3BH3tQhuMCIeLg/viewform?usp=pp_url">
+                    <button>Đăng Bài Viết</button>
+                  </a>
+                </div>
+              </div>
+          
+              <div class="container">
+                <div class="post-container">
+          
+                </div>
+                <button class="btn btn--view">Xem nhật kí cũ hơn</button>
+              </div>
+        </div>
+       
+    </div>
+
+    <div id="StoreHouse" class="tabcontent">
+        <h1>Nhà kho</h1>
+    </div>
+
+
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./DataGame/JS/Setting.js"></script>
+<script src="./DataGame/JS/Memory.js"></script>
+<script src="./Data/JS/Stories.js"></script>
+
+
+</html>

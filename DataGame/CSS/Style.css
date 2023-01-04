@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.tabMenu {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: bisque;
+    padding: 10px 0;
+}
+.tabMenu .tablinks {
+    background-color: white;
+    border: none ;
+    border-radius: 50%;
+    height:60px ;
+    width: 60px;
+    margin: auto;
+    box-shadow: 0px 0px 1px 1px #2d2d2d;
+}
+.tabMenu .active,
+.tabMenu .tablinks:hover {
+    background-color: orange;
+
+}
+.tabMenu .tablinks img {
+    width: 80%;
+    height: auto;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.Show {
+    display: block;
+}
+
+.Head {
+    position: fixed;
+    top: 0;
+    /* background-color: bisque; */
+    padding: 10px ;
+    display: grid;
+    grid-template-columns: 65px auto;
+    text-align: center;
+}
+.Head .Day {
+    color: #000000da;
+    background-color: #FA8072;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+}
+.Head .Day h1 {
+    margin: 7px 0 10px 0 ;
+}
+.Head .Block  {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.Head .Block .Hour {
+    margin:  0 0 auto 0;
+    color: #000000da;
+    background-color: #FA8072;
+    height: 24px;
+    width: 100px;
+    border-radius: 8px;
+}
+.Head .Hour span {
+    font-weight: 500;
+    margin: auto;
+}
+.Head .Block .MoneyLove {
+    margin:  auto 0 0 0;
+    display: grid;
+    grid-template-columns: 20px auto;
+    padding: 0 5px;
+    color: #000000da;
+    background-color: #facf72;
+    height: 30px;
+    width: 90px;
+    border-radius: 8px;
+}
+.Head .Block .MoneyLove img {
+    width: 20px;
+    margin: auto;
+}
+.Head .Block .MoneyLove p {
+    font-weight: bold;
+    margin: 3px 0 auto 0;
+}
+
+
+
+.BlockStorie {
+    margin-top: 60px ;
+    padding: 10px 10px 80px 10px ;
+}
+
+.Search {
+    margin-bottom: 30px;
+}
+.Search input {
+    color: var(--color);
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    height: 35px;
+    background-color: #222;
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+}
+.Search .Key {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    margin: 5px 0px;
+}
+.Search .Key button{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #333;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 35px 0px 5px 0px;
+    background-size: cover;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+/* f43d7b */
+.Search .Key button:nth-child(1) {
+    color: pink;
+    background-image: url(https://graph.facebook.com/100074217488487/picture?type=large&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662);
+}
+.Search .Key button:nth-child(2) {
+    color: #A6E4FF;
+    background-image: url(https://graph.facebook.com/100089054864569/picture?type=large&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662);
+}
+.Search .Key button:nth-child(3) {
+    color: #05b6e2;
+    background-image: url(/Data/IMG/BTNTEST.jpg);
+}
+.Search .Key button:nth-child(4) {
+    color: #f43d7b;
+    background-image: url(/Data/IMG/2021BTN.jpg);
+    background-position-y: -10px;
+}
+.post {
+    background-color:rgb(133, 133, 133);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+.post__author {
+    display: grid;
+    grid-template-columns: 60px auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.post__author--avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #00c3ff;
+} 
+.post__author div {
+    text-align: left;
+    padding: 5px 0;
+}
+.post__author div .post__author--name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.post__author div div{
+    display: grid; 
+    grid-template-columns:  50% 50%;
+    padding: 0;
+}
+.post__author div div .post__date {
+    font-size: 14px;
+    margin: auto 0;
+}
+.post__tag {
+    font-size: 10px;
+    font-weight: bold;
+    background-color: pink;
+    color: #000;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+.Emoji {
+    margin-bottom: 5px;
+}
+.post__body {
+    text-align: left;
+}
+.post__body img, .post__body video {
+    width: 100%;
+    border-radius: 5px;
+}
+.btn--view {
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 10px;
+    height: 40px;
+    background-color: var(--CardBG);
+    border: none;
+}
