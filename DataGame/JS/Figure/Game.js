@@ -6,7 +6,7 @@ var XHunqD = 50;
 function RandomAction() {
     var RandomAction = Math.floor(Math.random() * 2) + 1
     if (RandomAction == 1) {
-        Action2();
+        ClickSwBun();
     }
     if (RandomAction == 2) {
         ClickHunqD();
@@ -36,7 +36,7 @@ function Action1() {
         FigureName.innerHTML = 'Thy Thy';
         FigureChat.innerHTML = 'Em đây em đây. ';
         setTimeout(ChatOff, 5000);
-        setTimeout(RandomAction, 10000);
+        setTimeout(RandomAction, 15000);
     }, 5500);
 
 }

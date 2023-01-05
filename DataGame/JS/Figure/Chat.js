@@ -93,12 +93,15 @@ function ClickHunqD() {
     var ChatHunqD = Math.floor(Math.random() * 6) + 1
     if (ChatHunqD == 1) {
         FigureChat.innerHTML = 'Em là đồ con lợn ngủ nhiều hahaa 🤣';
+        setTimeout(ChatOff,2000);
     }
     if (ChatHunqD == 2) {
         FigureChat.innerHTML = 'Thy bị khùng lêu lêu 😜';
+        setTimeout(ChatOff,2000);
     }
     if (ChatHunqD == 3) {
         FigureChat.innerHTML = 'Anh yêu em lắm đó vợ yêu ❤';
+        setTimeout(ChatOff,2000);
     }
     if (ChatHunqD == 4) {
         FigureChat.innerHTML = 'Biết ông Thương không ? <br> <br> Thương cho tấm thân cơ hàn... hehee';
@@ -106,6 +109,7 @@ function ClickHunqD() {
         FigureSoundLink.src = './DataGame/Sounds/Music/ThuongChoTamThan.mp3';
         LoadSound();
         OnLightEffect();
+        setTimeout(ChatOff,5000);
     }
     if (ChatHunqD == 5) {
         FigureChat.innerHTML = 'Biết ông Khải không ? <br> <br> Biết... là mình thích nhao... còn chuyện xa hơn...  ♫ ♪';
@@ -113,10 +117,12 @@ function ClickHunqD() {
         FigureSoundLink.src = './DataGame/Sounds/Music/BietLaMinhThichNhau.mp3';
         LoadSound();
         OnLightEffect();
+        setTimeout(ChatOff,5000);
     }
     if (ChatHunqD == 6) {
         Action2();
     }
+    
 
 }
 
