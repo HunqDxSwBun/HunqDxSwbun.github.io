@@ -119,7 +119,18 @@ body {
 .LightEffect img {
     width: 100%;
 }
-
+.RainEffect {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 3;
+}
+.RainEffect img {
+    width: 100%;
+    height: 100vh;
+}
 
 
 #Chat {
@@ -188,13 +199,13 @@ body {
     height: 160px;
 }
 .Home .Figure .HunqD {
-    right: 50px;
+    left: -120px;
     color: #0077ff;
     text-shadow: 0 0 3px #d8d8d8;
 }
 
 .Home .Figure .SwBun {
-    right: 140px;
+    left: -120px;
     color: #ff2fc0;
     text-shadow: 0 0 3px #d8d8d8;
 }
@@ -329,4 +340,10 @@ canvas {
     height: 40px;
     background-color: var(--CardBG);
     border: none;
+}
+
+.Control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }

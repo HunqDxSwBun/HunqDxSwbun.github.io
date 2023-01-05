@@ -4,9 +4,10 @@ var FigureName = document.getElementById('FigureName');
 var FigureChat = document.getElementById('FigureChat');
 var FigureSound = document.getElementById('FigureSound');
 var FigureSoundLink = document.getElementById('FigureSoundLink');
-var LightEffect = document.getElementById('LightEffect');
-var Effect = document.getElementById('Effect');
 
+var Effect = document.getElementById('Effect');
+var LightEffect = document.getElementById('LightEffect');
+var RainEffect = document.getElementById('RainEffect');
 
 
 
@@ -55,6 +56,16 @@ function OffLightEffect() {
     OffSound();
 }
 
+function OnRainEffect() {
+    RainEffect.style.display = 'Block';
+    Effect.style.display = 'Block';
+
+}
+function OffRainEffect() {
+    RainEffect.style.display = 'none';
+    Effect.style.display = 'none';
+    OffSound();
+}
 
 
 function VolSound() {
@@ -74,11 +85,12 @@ function ClickHunqD() {
     OffSound();
     ChatOn();
     OffLightEffect();
+    OffRainEffect();
 
     FigureAvatar.src = AvatarHunqD;
     FigureName.innerHTML = 'Mạnh Hùng';
 
-    var ChatHunqD = Math.floor(Math.random() * 5) + 1
+    var ChatHunqD = Math.floor(Math.random() * 6) + 1
     if (ChatHunqD == 1) {
         FigureChat.innerHTML = 'Em là đồ con lợn ngủ nhiều hahaa 🤣';
     }
@@ -101,7 +113,9 @@ function ClickHunqD() {
         FigureSoundLink.src = './DataGame/Sounds/Music/BietLaMinhThichNhau.mp3';
         LoadSound();
         OnLightEffect();
-
+    }
+    if (ChatHunqD == 6) {
+        Action2();
     }
 
 }
@@ -112,6 +126,7 @@ function ClickSwBun() {
     OffSound();
     ChatOn();
     OffLightEffect();
+    OffRainEffect();
 
     FigureAvatar.src = AvatarSwBun;
     FigureName.innerHTML = 'Thy Thy';
@@ -121,7 +136,7 @@ function ClickSwBun() {
         FigureChat.innerHTML = 'Anh mới là đồ con lợn';
     }
     if (ChatSwBun == 2) {
-        FigureChat.innerHTML = 'Hùng Khùng 😒';
+        FigureChat.innerHTML = 'Hùng Điên 😒';
     }
     if (ChatSwBun == 3) {
         FigureChat.innerHTML = 'Em cũng yêu anh nhiều lắm 🙆‍♀️';

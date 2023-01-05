@@ -1,5 +1,7 @@
 window.onload = function () {
     OnLOAD();
+    setTimeout(Action1,1000);
+
 };
 
 function OnLOAD() {
