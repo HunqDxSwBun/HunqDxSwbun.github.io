@@ -140,12 +140,15 @@ function ClickSwBun() {
     var ChatSwBun = Math.floor(Math.random() * 5) + 1
     if (ChatSwBun == 1) {
         FigureChat.innerHTML = 'Anh mới là đồ con lợn';
+        setTimeout(ChatOff,2000);
     }
     if (ChatSwBun == 2) {
         FigureChat.innerHTML = 'Hùng Điên 😒';
+        setTimeout(ChatOff,2000);
     }
     if (ChatSwBun == 3) {
-        FigureChat.innerHTML = 'Em cũng yêu anh nhiều lắm 🙆‍♀️';
+        FigureChat.innerHTML = 'Em yêu anh nhiều lắm 🙆‍♀️';
+        setTimeout(ChatOff,2000);
     }
     if (ChatSwBun == 4) {
         FigureChat.innerHTML = 'Biết ông Khải không ? <br> <br> Khải lên khúc nhạc hoàng cầm buồn ngày mình biệt ly ♪ ♫';
@@ -153,6 +156,7 @@ function ClickSwBun() {
         FigureSoundLink.src = './DataGame/Sounds/Music/KhaiLenKhucNhac.mp3';
         LoadSound();
         OnLightEffect();
+        setTimeout(ChatOff,5000);
     }
     if (ChatSwBun == 5) {
         FigureChat.innerHTML = 'Biết bà Vòng không ? <br> <br> Vòng xe lăn bánh,chào tạm biệt em, Tình yêu anh sẽ giữ trong tim này♪ ♫';
@@ -160,6 +164,7 @@ function ClickSwBun() {
         FigureSoundLink.src = './DataGame/Sounds/Music/VongXeLanBanh.mp3';
         LoadSound();
         OnLightEffect();
+        setTimeout(ChatOff,5000);
     }
 
 
