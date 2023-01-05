@@ -110,7 +110,7 @@ function ClickHunqD() {
         LoadSound();
         OnLightEffect();
         setTimeout(ChatOff,5000);
-        setTimeout(OffLightEffect,10000);
+
     }
     if (ChatHunqD == 5) {
         FigureChat.innerHTML = 'Biết ông Khải không ? <br> <br> Biết... là mình thích nhao... còn chuyện xa hơn...  ♫ ♪';
@@ -119,7 +119,7 @@ function ClickHunqD() {
         LoadSound();
         OnLightEffect();
         setTimeout(ChatOff,5000);
-        setTimeout(OffLightEffect,10000);
+
     }
     if (ChatHunqD == 6) {
         Action2();
@@ -159,7 +159,7 @@ function ClickSwBun() {
         LoadSound();
         OnLightEffect();
         setTimeout(ChatOff,5000);
-        setTimeout(OffLightEffect,10000);
+
     }
     if (ChatSwBun == 5) {
         FigureChat.innerHTML = 'Biết bà Vòng không ? <br> <br> Vòng xe lăn bánh,chào tạm biệt em, Tình yêu anh sẽ giữ trong tim này♪ ♫';
@@ -168,7 +168,7 @@ function ClickSwBun() {
         LoadSound();
         OnLightEffect();
         setTimeout(ChatOff,5000);
-        setTimeout(OffLightEffect,10000);
+
     }
 
 
