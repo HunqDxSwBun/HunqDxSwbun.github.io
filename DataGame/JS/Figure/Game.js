@@ -36,7 +36,7 @@ function Action1() {
         FigureName.innerHTML = 'Thy Thy';
         FigureChat.innerHTML = 'Em đây em đây. ';
         setTimeout(ChatOff, 5000);
-        setTimeout(RandomAction, 15000);
+
     }, 5500);
 
 }
@@ -65,7 +65,9 @@ function Action2() {
     }, 12000);
 
     setTimeout(() => {
-        FigureChat.innerHTML = 'Trời đã gần sáng rồi, Mà nỗi nhớ anh vẫn còn ngổn ngang...';
+        imgSwBun.src = './DataGame/IMG/Figure/SwBun/SwBun_Cry.GIF';
+
+        FigureChat.innerHTML = 'Trời đã gần sáng rồi, Mà nỗi nhớ anh vẫn còn ngổn ngang... 😢';
         FigureSoundLink.src = './DataGame/Sounds/Music/SaoAnhChuaVe.mp3';
         LoadSound();
         OnRainEffect();
@@ -83,7 +85,8 @@ function Action2() {
 
  
         setTimeout(() => {
-            ChatOn();
+        ChatOn();
+        imgSwBun.src = './DataGame/IMG/Figure/SwBun/SwBun1.GIF';
         FigureAvatar.src = AvatarHunqD;
         FigureName.innerHTML = 'Mạnh Hùng';
         FigureChat.innerHTML = 'U là trời, mới đi có xíu mà đã vậy rồi.';

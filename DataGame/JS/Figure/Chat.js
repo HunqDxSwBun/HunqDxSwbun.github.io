@@ -9,6 +9,11 @@ var Effect = document.getElementById('Effect');
 var LightEffect = document.getElementById('LightEffect');
 var RainEffect = document.getElementById('RainEffect');
 
+var imgSwBun = document.getElementById('imgSwBun');
+var imgHunqD = document.getElementById('imgHunqD');
+
+
+
 
 
 
