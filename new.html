@@ -42,12 +42,6 @@
 
     </div>
 
-    <div style="text-align:center;width:480px; position: fixed; top: 50px;">
-        <button onmousedown="moveup2()" onmouseup="clearmove()" ontouchstart="moveup2()">Lên</button><br><br>
-        <button onmousedown="moveleft2()" onmouseup="clearmove()" ontouchstart="moveleft2()">Trái</button>
-        <button onmousedown="moveright2()" onmouseup="clearmove()" ontouchstart="moveright2()">Phải</button><br><br>
-        <button onmousedown="movedown2()" onmouseup="clearmove()" ontouchstart="movedown2()">Xuống</button>
-      </div>
 
     
 
@@ -69,6 +63,12 @@
                 <img src="./DataGame/IMG/iconHead/heart.png" alt="" srcset="">
                 <p>1.000</p>
             </div>
+        </div>
+    </div>
+
+    <div class="Effect" id="Effect" onclick="OffLightEffect()">
+        <div class="LightEffect" id="LightEffect" >
+            <img src="./DataGame/IMG/Home/LightEffect.gif" alt="" srcset="">
         </div>
     </div>
 
@@ -97,17 +97,22 @@
         
     </div>
 
+    
 
-    <div id="Home" class="tabcontent ">
+   
+
+
+    <div id="Home" class="tabcontent Show">
         <div class="Home">
-            <div class="LightEffect" id="LightEffect">
+            <div class="LightEffect" id="LightEffect" onclick="OffLightEffect()">
                 <img src="./DataGame/IMG/Home/LightEffect.gif" alt="" srcset="">
             </div>
             
+            
             <div class="Figure">
-                <div class="HunqD">
+                <div class="HunqD" id="HunqD">
                     <h1>Mạnh Hùng</h1>
-                    <img id="HunqD" src="./DataGame/IMG/Figure/HunqD/HunqD1.PNG" alt="HunqD" onclick="ClickHunqD()">
+                    <img  src="./DataGame/IMG/Figure/HunqD/HunqD1.PNG" alt="HunqD" onclick="ClickHunqD()">
                 </div>
                 <div class="SwBun">
                     <h1>Thy Thy</h1>

@@ -5,6 +5,8 @@ var FigureChat = document.getElementById('FigureChat');
 var FigureSound = document.getElementById('FigureSound');
 var FigureSoundLink = document.getElementById('FigureSoundLink');
 var LightEffect = document.getElementById('LightEffect');
+var Effect = document.getElementById('Effect');
+
 
 
 
@@ -35,14 +37,22 @@ function OffSound() {
     FigureSound.pause();
 }
 
+function UnMuteSound(){
+    FigureSound.muted = false;;
+}
+function MuteSound(){
+    FigureSound.muted = true;
+}
 
 function OnLightEffect() {
     LightEffect.style.display = 'Block';
+    Effect.style.display = 'Block';
 
 }
 function OffLightEffect() {
     LightEffect.style.display = 'none';
-
+    Effect.style.display = 'none';
+    OffSound();
 }
 
 
@@ -50,10 +60,10 @@ function OffLightEffect() {
 function VolSound() {
     var ControlSound = document.getElementById('ControlSound');
     if (ControlSound.className == 'fa-solid fa-volume-high') {
-        OffSound();
+        MuteSound();
         ControlSound.className = 'fa-solid fa-volume-xmark'
     } else {
-        OnSound();
+        UnMuteSound();
         ControlSound.className = 'fa-solid fa-volume-high'
     }
 }

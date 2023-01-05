@@ -2,12 +2,16 @@
     margin: 0;
 }
 body {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .tabMenu {
     position: fixed;
-    z-index: 2;
+    z-index: 0;
     width: 100%;
     bottom: 0;
     display: grid;
@@ -98,6 +102,26 @@ body {
     font-weight: bold;
     margin: 3px 0 auto 0;
 }
+.Effect {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.459);
+    width: 100%;
+    height: 100vh;
+}
+.LightEffect {
+    position: fixed;
+    width: 100%;
+    display: none;
+    z-index: 3;
+}
+.LightEffect img {
+    width: 100%;
+}
+
+
+
 #Chat {
     display: none;
 }
@@ -106,6 +130,7 @@ body {
     grid-template-columns: 100px auto;
     gap: 10px;
     position: fixed;
+    z-index: 4;
     top: 100px;
     left: 10px;
     width: calc(100% - 30px);
@@ -138,33 +163,24 @@ body {
 
 
 
-canvas {
-    background-image: url(/DataGame/IMG/Home/wall.png);
-    background-size: cover;
-
-}
-
 
 .Home {
+    overflow: hidden;
     background-color: #cb987a;
     height: 90vh;
     background-image: url(/DataGame/IMG/Home/wall.png);
     background-size: cover;
 }
-.Home .LightEffect {
-    display: none;
-}
-.Home .LightEffect img {
-    width: 100%;
-}
+
 .Home .Figure {
     text-align: center;
-    position: absolute;
-    bottom: 100px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
 }
+.Home .Figure div {
+   position: fixed;
+   bottom: 80px;
+   z-index: 2;
+}
+
 .Home .Figure div h1{
     font-size: 16px;
 }
@@ -172,11 +188,13 @@ canvas {
     height: 160px;
 }
 .Home .Figure .HunqD {
+    right: 50px;
     color: #0077ff;
     text-shadow: 0 0 3px #d8d8d8;
 }
 
 .Home .Figure .SwBun {
+    right: 140px;
     color: #ff2fc0;
     text-shadow: 0 0 3px #d8d8d8;
 }
