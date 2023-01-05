@@ -93,15 +93,15 @@ function ClickHunqD() {
     var ChatHunqD = Math.floor(Math.random() * 6) + 1
     if (ChatHunqD == 1) {
         FigureChat.innerHTML = 'Em là đồ con lợn ngủ nhiều hahaa 🤣';
-        setTimeout(ChatOff,2000);
+        setTimeout(ChatOff,3000);
     }
     if (ChatHunqD == 2) {
         FigureChat.innerHTML = 'Thy bị khùng lêu lêu 😜';
-        setTimeout(ChatOff,2000);
+        setTimeout(ChatOff,3000);
     }
     if (ChatHunqD == 3) {
         FigureChat.innerHTML = 'Anh yêu em lắm đó vợ yêu ❤';
-        setTimeout(ChatOff,2000);
+        setTimeout(ChatOff,3000);
     }
     if (ChatHunqD == 4) {
         FigureChat.innerHTML = 'Biết ông Thương không ? <br> <br> Thương cho tấm thân cơ hàn... hehee';
@@ -142,15 +142,15 @@ function ClickSwBun() {
     var ChatSwBun = Math.floor(Math.random() * 5) + 1
     if (ChatSwBun == 1) {
         FigureChat.innerHTML = 'Anh mới là đồ con lợn';
-        setTimeout(ChatOff,2000);
+        setTimeout(ChatOff,3000);
     }
     if (ChatSwBun == 2) {
         FigureChat.innerHTML = 'Hùng Điên 😒';
-        setTimeout(ChatOff,2000);
+        setTimeout(ChatOff,3000);
     }
     if (ChatSwBun == 3) {
         FigureChat.innerHTML = 'Em yêu anh nhiều lắm 🙆‍♀️';
-        setTimeout(ChatOff,2000);
+        setTimeout(ChatOff,3000);
     }
     if (ChatSwBun == 4) {
         FigureChat.innerHTML = 'Biết ông Khải không ? <br> <br> Khải lên khúc nhạc hoàng cầm buồn ngày mình biệt ly ♪ ♫';
