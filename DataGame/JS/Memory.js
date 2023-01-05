@@ -1,5 +1,6 @@
 window.onload = function () {
     OnLOAD();
+    startGame();
 };
 
 function OnLOAD() {
